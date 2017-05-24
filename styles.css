@@ -1,0 +1,134 @@
+@font-face {
+  font-family: digital;
+  src: url(digital-7.regular.ttf);
+}
+
+.calculator {
+  background: gray;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 350px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.inputArea {
+  border: 10px solid black;
+  border-radius: 5px;
+  width: 300px;
+  overflow: hidden;
+  background: #476b3d;
+  padding-left: 10px;
+  display: block;
+  margin: 10px auto 30px;
+  height: 50px;
+  font-size: 50px;
+}
+
+.inputText {
+  font-family: digital;
+  float: right;
+}
+
+.error {
+  font-size: 20px;
+}
+
+.title {
+  font-family: digital;
+  margin: -20px 0 0 20px;
+}
+
+.solar {
+  position: relative;
+  height: 20px;
+  width: 80px;
+  background-color: #24310b;
+  float: right;
+  margin: -20px 20px 0 0;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: #484646;
+}
+
+.line:first-child {
+  left: 20px;
+}
+
+.line:nth-child(2) {
+  left: 40px;
+}
+
+.line:last-child {
+  left: 60px;
+}
+
+.buttonArea {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.buttonArea:last-child {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 60px;
+  margin: 10px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.button:focus {
+  text-decoration: none;
+  border: none;
+}
+
+.equals {
+  width: 50%;
+  background: #000;
+  color: #fff;
+}
+
+.operator {
+  background: #000;
+  color: #fff;
+}
+
+.clear {
+  background: #982626;
+  color: #fff;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
