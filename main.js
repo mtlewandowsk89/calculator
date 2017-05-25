@@ -93,6 +93,10 @@ $(function() {
     if ($('.inputText').text().length >= 10) {
       return false;
     }
+    //prevents multiple decimel points in any number
+    if ($(this).attr('data-id') == '.' && $('.inputText').text().includes('.')) {
+      return false;
+    }
     //sets the value of lastPress to 2 to represent a number key being pressed last.
     lastPress = 2;
     //clears the input screen if you have pressed more than 2 operator keys and the value of hidden input total = the text on the input screen
