@@ -57,7 +57,7 @@ $(function() {
       case '106-false': case '56-true':
         $('.times').click();
         break;
-      case '111-false': case '191-true':
+      case '111-false': case '191-false':
         $('.divide').click();
         break;
       case '53-true':
