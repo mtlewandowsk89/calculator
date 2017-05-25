@@ -190,12 +190,6 @@ $(function() {
 
   //this runs when any operator key is clicked. For example, '+' or '-' or '*'. This includes '='
   $('.operator').click(function() {
-    //if there are at least 10 characters on the screen. shorten it to 10 and place the E sign for error on the input screen and stop the rest of the code from running
-    if ($('.total').val().toString().length >= 10) {
-      let shortenedString = $('.total').val().toString().substring(0, 10);
-      $('.inputText').html(shortenedString + '<span class="error">E</span>');
-      return false;
-    }
     //if there is no text on the input screen, exit the function and don't allow any operators to be pressed.
     if (!$('.inputText').text()) {
       return false;
@@ -229,13 +223,17 @@ $(function() {
           if ($('.total').val()) {
             //divides the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.total').val()) / parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           } else {
             //this runs if there was no value in the hidden input total
             //divides the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.num'+newInputNumber).val()) / parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           }
         //this code runs if you are doing multiplication (you hit times key last)
@@ -244,13 +242,17 @@ $(function() {
           if ($('.total').val()) {
             //multiplies the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.total').val()) * parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           } else {
             //this runs if there was no value in the hidden input total
             //multiplies the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.num'+newInputNumber).val()) * parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           }
         //this code runs if you are doing subtraction (you hit minus key last)
@@ -259,13 +261,17 @@ $(function() {
           if ($('.total').val()) {
             //subtracts the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.total').val()) - parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           } else {
             //this runs if there was no value in the hidden input total
             //subtracts the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.num'+newInputNumber).val()) - parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           }
         //this code runs if you are doing addition (you hit plus key last)
@@ -274,13 +280,17 @@ $(function() {
           if ($('.total').val()) {
             //adds the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.total').val()) + parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           } else {
             //this runs if there was no value in the hidden input total
             //adds the 2 previous numbers and gets a new value set to newNumber. This is then set as the value of the hidden input total and displayed on the input screen.
             let newNumber = parseFloat($('.num'+newInputNumber).val()) + parseFloat($('.num'+newInputNumber2).val());
-            $('.inputText').text(newNumber);
+            //allow max of 10 characters to show on the input screen
+            let shortenedString = (newNumber).toString().substring(0, 10);
+            $('.inputText').text(shortenedString);
             $('.total').val(newNumber);
           }
         }
